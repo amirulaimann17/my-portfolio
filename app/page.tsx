@@ -1,101 +1,92 @@
-import Image from "next/image";
+import React from "react";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <main className="flex flex-col items-center justify-center min-h-screen bg-black text-white p-6">
+      <header className="w-full max-w-4xl flex flex-col md:flex-row justify-between items-center py-4 text-center md:text-left bg-black bg-opacity-50 rounded-lg shadow-md" role="banner">
+        <div className="flex items-center space-x-4">
+          <h1 className="text-2xl font-extrabold text-white-400 animate-pulse">Muhammad Amirul Aiman</h1>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+        <nav className="mt-2 md:mt-0" role="navigation" aria-label="Main navigation">
+          <ul className="flex space-x-6 text-lg">
+            <li><a href="#about" className="text-white-400 hover:text-white transition transform duration-500 ease-in-out hover:scale-110 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-purple-400" aria-label="About section">About</a></li>
+            <li><a href="#skills" className="text-white-400 hover:text-white transition transform duration-500 ease-in-out hover:scale-110 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-purple-400" aria-label="Skills section">Skills</a></li>
+            <li><a href="#projects" className="text-white-400 hover:text-white transition transform duration-500 ease-in-out hover:scale-110 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-purple-400" aria-label="Projects section">Projects</a></li>
+            <li><a href="#contact" className="text-white-400 hover:text-white transition transform duration-500 ease-in-out hover:scale-110 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-purple-400" aria-label="Contact section">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+      <section className="w-full max-w-4xl flex flex-col md:flex-row items-center mt-10 text-center md:text-left">
+        <div className="md:w-2/3">
+          <h2 className="text-5xl font-extrabold text-white">Muhammad Amirul Aiman</h2>
+          <p className="text-gray-400 mt-4 text-lg">Bachelor of Information Systems (Hons) | Software Engineer | Passionate about Web & Mobile Development</p>
+        </div>
+        <div className="md:w-1/3 flex justify-center md:justify-end mt-6 md:mt-0">
+          <img
+            src="profilePhoto.png"
+            alt="Muhammad Amirul Aiman"
+            className="w-64 h-64 md:w-80 md:h-80 object-cover shadow-xl rounded-lg transform hover:scale-105 transition duration-400 ease-in-out"
           />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        </div>
+      </section>
+      <section id="about" className="w-full max-w-4xl mt-10 text-center md:text-left p-6 bg-gradient-to-r from-gray-800 to-black rounded-lg shadow-lg">
+        <h3 className="text-4xl font-bold text-purple-400">About Me</h3>
+        <div className="mt-4 text-white text-lg space-y-4">
+          <p><strong>🎓 Past:</strong> A dedicated university student who consistently made the Dean’s List for six consecutive semesters, proving academic excellence and passion for software engineering.</p>
+          <p><strong>💼 Present:</strong> Currently interning as an IT Testing Assurance Intern at Edwards Lifesciences, where I focus on test management updates, process enhancements, and software development.</p>
+          <p><strong>🚀 Future:</strong> Aspiring to secure a software engineering role where I can build impactful web and mobile applications, leveraging my skills in Java, MySQL, Flutter, and Swift UI.</p>
+        </div>
+      </section>
+
+      <section id="skills" className="w-full max-w-4xl mt-10">
+        <h3 className="text-4xl font-bold text-purple-400">Skills</h3>
+        <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="p-6 bg-gray-800 bg-opacity-20 shadow-lg rounded-lg hover:scale-105 transform transition duration-400 ease-in-out">
+            <h4 className="text-2xl font-semibold">Front-End Development</h4>
+            <p className="text-gray-400">HTML, CSS, JavaScript, React, Flutter, Swift UI</p>
+          </div>
+          <div className="p-6 bg-gray-800 bg-opacity-20 shadow-lg rounded-lg hover:scale-105 transform transition duration-400 ease-in-out">
+            <h4 className="text-2xl font-semibold">Back-End Development</h4>
+            <p className="text-gray-400">Java, Next.js, PHP, MySQL, MVC.NET</p>
+          </div>
+          <div className="p-6 bg-gray-800 bg-opacity-20 shadow-lg rounded-lg hover:scale-105 transform transition duration-400 ease-in-out">
+            <h4 className="text-2xl font-semibold">Mobile Development</h4>
+            <p className="text-gray-400">Flutter, Swift, Android Studio, Xcode</p>
+          </div>
+          <div className="p-6 bg-gray-800 bg-opacity-20 shadow-lg rounded-lg hover:scale-105 transform transition duration-400 ease-in-out">
+            <h4 className="text-2xl font-semibold">Others</h4>
+            <p className="text-gray-400">Git, GitHub, Agile, Scrum, RESTful APIs</p>
+          </div>
+        </div>
+      </section>
+      <section id="projects" className="w-full max-w-4xl mt-10">
+        <h3 className="text-4xl font-bold text-purple-400">Projects</h3>
+        <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="p-6 bg-gray-800 bg-opacity-20 shadow-lg rounded-lg hover:scale-105 transform transition duration-400 ease-in-out">
+            <h4 className="text-2xl font-semibold">🍽️ Mobile-Based Dining Companion App</h4>
+            <p className="text-gray-400">An app to help users find dining partners and explore restaurants.</p>
+          </div>
+          <div className="p-6 bg-gray-800 bg-opacity-20 shadow-lg rounded-lg hover:scale-105 transform transition duration-400 ease-in-out">
+            <h4 className="text-2xl font-semibold">🍲 Food Donation Mobile Application</h4>
+            <p className="text-gray-400">A platform connecting food donors with charities to reduce food waste.</p>
+          </div>
+          <div className="p-6 bg-gray-800 bg-opacity-20 shadow-lg rounded-lg hover:scale-105 transform transition duration-400 ease-in-out">
+            <h4 className="text-2xl font-semibold">⚽ Football Team Management System</h4>
+            <p className="text-gray-400">A JavaDB-based system to manage football teams and schedules.</p>
+          </div>
+          <div className="p-6 bg-gray-800 bg-opacity-20 shadow-lg rounded-lg hover:scale-105 transform transition duration-400 ease-in-out">
+            <h4 className="text-2xl font-semibold">💰 Splitwise Alternative App</h4>
+            <p className="text-gray-400">A budget management app with local and cloud database support.</p>
+          </div>
+        </div>
+      </section>
+      <section id="contact" className="w-full max-w-4xl mt-10 text-center p-6 bg-gray-800 bg-opacity-20 rounded-lg shadow-lg">
+        <h3 className="text-4xl font-bold text-purple-400">Contact</h3>
+        <p className="text-gray-400 mt-2 text-lg">Feel free to reach out to me:</p>
+        <p className="text-gray-400 text-lg">📧 <a href="mailto:amirulaimann17@gmail.com" className="text-purple-400 hover:text-white transition duration-400 ease-in-out">amirulaimann17@gmail.com</a></p>
+        <p className="text-gray-400 text-lg">📍 Kuala Lumpur, Malaysia</p>
+        <p className="text-gray-400 text-lg">🔗 <a href="https://www.linkedin.com/in/muhammad-amirul-aiman-shahrizar" className="text-purple-400 hover:text-white transition duration-400 ease-in-out">LinkedIn</a></p>
+      </section>
+    </main>
   );
 }
