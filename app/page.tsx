@@ -1,4 +1,5 @@
 import React from "react";
+import Image from 'next/image';
 
 export default function Home() {
   return (
@@ -22,10 +23,12 @@ export default function Home() {
           <p className="text-gray-400 mt-4 text-lg">Bachelor of Information Systems (Hons) | Software Engineer | Passionate about Web & Mobile Development</p>
         </div>
         <div className="md:w-1/3 flex justify-center md:justify-end mt-6 md:mt-0">
-          <img
-            src="profilePhoto.png"
+          <Image
+            src="/profilePhoto.png"
             alt="Muhammad Amirul Aiman"
-            className="w-64 h-64 md:w-80 md:h-80 object-cover shadow-xl rounded-lg transform hover:scale-105 transition duration-400 ease-in-out"
+            width={400}
+            height={200}
+            className=""
           />
         </div>
       </section>
